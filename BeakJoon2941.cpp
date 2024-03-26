@@ -10,13 +10,13 @@ cout.tie(NULL);
 
         cin >> star;
     for(int a=0; a<star; a++){
-        for(int c=0; c<a; c++){
+        for(int b=0; b<(star-a)*2-1; b++){
+            cout << "*";
+        }
+        cout <<"\n";
+        for(int b=0; b<a+1; b++){
             cout<<" ";
         }
-        for(int b=0; b<star-((a-1)*2); b++){
-            cout<<"*";
-        }
-        cout<<"\n";
     }
     
 }
