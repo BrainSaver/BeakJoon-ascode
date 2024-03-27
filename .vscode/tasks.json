@@ -9,7 +9,7 @@
                 "-g",
                 "${file}",
                 "-o",
-                "${fileDirname}\\Builds\\${fileBasenameNoExtension}.exe"
+                "C:\\Users\\sk991\\Desktop\\20212972\\BeakJoon\\Builds\\${fileBasenameNoExtension}.exe"
             ],
             "options": {
                 "cwd": "${fileDirname}"
@@ -32,7 +32,7 @@
                 "-g",
                 "${file}",
                 "-o",
-                "${fileDirname}\\Builds\\${fileBasenameNoExtension}.exe"
+                "C:\\Users\\sk991\\Desktop\\20212972\\BeakJoon\\Builds\\${fileBasenameNoExtension}.exe"
             ],
             "options": {
                 "cwd": "${fileDirname}"
