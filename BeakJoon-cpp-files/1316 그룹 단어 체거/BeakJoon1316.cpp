@@ -1,6 +1,7 @@
 #include <iostream>
 #pragma warning(disable : 4996)
 using namespace std;
+
 /*
 그룹 단어 체커
 
@@ -14,6 +15,7 @@ int main() {
 ios_base :: sync_with_stdio(false); 
 cin.tie(NULL); 
 cout.tie(NULL);
+
     int testcase=0;
     string word[100];
     cin >> testcase;//testcase 입력받기
@@ -21,14 +23,13 @@ cout.tie(NULL);
     for(int a=0; a<testcase; a++){//단어 입력받기
     cin >> word[a];
     }
+    for(int a=0; a<testcase; a++){//입력받은 단어 수만큼 검사
     int alpha[26]={0};
-for(int a=0; a<testcase; a++){//입력받은 단어 수만큼 검사
     for(int b=0; b<26; b++){//알파벳 수만큼 반복
     while(word[a][b]!='a'+b){
         alpha[b]++;
         b++;
     }
     }
-}
-
+    }
 }
