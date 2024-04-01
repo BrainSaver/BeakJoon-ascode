@@ -3,37 +3,42 @@
 using namespace std;
 
 int main() {
-ios_base :: sync_with_stdio(false); 
-cin.tie(NULL); 
-cout.tie(NULL);
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+    int testcase;
+    cin >> testcase;
 
-int testcase;
-cin >> testcase;
+    if (testcase != 1) {
+        for (int a = 1; a < testcase + 1; a++) {
+            for (int fora = 0; fora < a; fora++) {
+                cout << "*";
+            }
+            for (int forb = 0; forb < (testcase - a) * 2; forb++) {
+                cout << " ";
+            }
+            for (int fora = 0; fora < a; fora++) {
+                cout << "*";
+            }
+            cout << "\n";
+        }
 
-for(int a=0; a<testcase; a++){
-    for(int b=0; b<a; b++){
-    cout << "*";
-    }
-    for(int c=0; c<(testcase-a)*2; c++){
-    cout << " ";
-    }
-    for(int b=0; b<a; b++){
-    cout << "*";
-    }
-    cout<<"\n";
-}
+        for (int a = 0; a < testcase - 1; a++) {
+            for (int fora = 0; fora < (testcase - a) - 1; fora++) {
+                cout << "*";
+            }
+            for (int fora = 0; fora < (a + 1) * 2; fora++) {
+                cout << " ";
+            }
+            for (int fora = 0; fora < (testcase - a) - 1; fora++) {
+                cout << "*";
+            }
+            cout << "\n";
+        }
 
-for(int a=0; a<testcase; a++){
-    for(int b=0; b<testcase-a; b++){
-    cout << "*";
     }
-    for(int c=0; c<(a*2); c++){
-    cout << " ";
+    else if (testcase == 1) {
+        cout << "**\n";
     }
-    for(int b=0; b<testcase-a; b++){
-    cout << "*";
-    }
-    if(a!=testcase) cout<<"\n";
-}
 
 }
