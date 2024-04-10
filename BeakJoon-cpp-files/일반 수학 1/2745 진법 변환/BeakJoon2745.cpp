@@ -19,21 +19,29 @@ B진법 수 N을 10진법으로 바꾸면, 항상 10억보다 작거나 같다.
 
 #include <iostream>
 #include <cmath>
+#define FASTOUT ios_base :: sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
 #pragma warning(disable : 4996)
 using namespace std;
 
 int main() {
-ios_base :: sync_with_stdio(false); 
-cin.tie(NULL); 
-cout.tie(NULL);
+FASTOUT
     string N;
     int B;
-
     cin >> N >> B;
     int sum(0);
-
+    
     for(int i=0; i<N.size(); i++){
-        
+        int num = N[i];
+        if(num>10){
+            if(num>=65 && num<=90){
+            num=N[i]-55;
+            }
+            else if(num>=48 && num<=57){
+            num=N[i]-48;
+            }
+        //cout << num << "\n";
+        }
+        sum += num*pow(B, N.size()-1-i);
     }
 
 
