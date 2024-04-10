@@ -1,46 +1,22 @@
-/*https://www.acmicpc.net/problem/11005*/
+#include <stdio.h>
 
-/*
-문제
-10진법 수 N이 주어진다. 이 수를 B진법으로 바꿔 출력하는 프로그램을 작성하시오.
+void F(int N, int X)
+{
+	if (N == 0)
+		return;
 
-10진법을 넘어가는 진법은 숫자로 표시할 수 없는 자리가 있다. 이런 경우에는 다음과 같이 알파벳 대문자를 사용한다.
+	F(N / X,X);
 
-A: 10, B: 11, ..., F: 15, ..., Y: 34, Z: 35
+	if (N % X >= 10)
+		printf("%c", 'A' + N % X - 10); // X가 10보다 큰 경우를 처리하기 위해서
+	else
+		printf("%d", N % X);
+}
 
-입력
-첫째 줄에 N과 B가 주어진다. (2 ≤ B ≤ 36) N은 10억보다 작거나 같은 자연수이다.
+int main(){
+	int N, X;
 
-출력
-첫째 줄에 10진법 수 N을 B진법으로 출력한다.
-*/
+	scanf("%d %d", &N, &X);
 
-#include <iostream>
-#include <cmath>
-#define FASTOUT ios_base :: sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
-#pragma warning(disable : 4996)
-using namespace std;
-
-int main() {
-FASTOUT
-    string N;
-    int B;
-    cin >> N >> B;
-    int sum(0);
-    
-    for(int i=0; i<N.size(); i++){
-        int num = N[i];
-        if(num>10){
-            if(num>=65 && num<=90){
-            num=N[i]-55;
-            }
-            else if(num>=48 && num<=57){
-            num=N[i]-48;
-            }
-        }
-        sum += num*pow(B, N.size()-1-i);
-    }
-
-
-        cout << sum;
-    }
+	F(N, X);
+}
