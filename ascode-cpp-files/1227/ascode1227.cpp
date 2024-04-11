@@ -7,8 +7,8 @@ using namespace std;
 int start=0, fin=0;
 
 int max( int a, int b ) {
-if( a > b ) return a;
-else return b;
+if( a > b ) {return a;}
+else {return b;}
 }
 
 int getMax( int arr[], int N ) {
@@ -17,7 +17,7 @@ int sum = 0;
 for(int i=0;i<N;++i) {
 sum += arr[i];
 best = max( best, sum );
-if( sum < 0 ) sum = 0;
+if( sum < 0 ) {sum = 0;}
 }
 return best;
 } 

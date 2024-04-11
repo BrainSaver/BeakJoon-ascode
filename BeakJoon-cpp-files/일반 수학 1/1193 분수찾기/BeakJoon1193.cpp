@@ -7,44 +7,16 @@ using namespace std;
 
 int main() {
     FASTOUT
-        const int SIZE = 10000000;
-    int line = 1;
     int X;
 
-    cin >> X;//찾을 분수번호
-   for
-    else {//1이 아닌 경우
+    cin >> X;
 
-        int xpy = 2;
-        int x=0, y=0;
-        while (xpy!=X) {
-
-            if (xpy % 2 == 1) {
-                for (int i = 1; i < xpy; i++) {
-                    //cout << i << '/' << xpy - i << "\n";
-                    if (line == X) {
-                        x = i , y = xpy - i;
-                    }
-                    line++;
-                }
-            }
-
-            if (xpy % 2 == 0) {
-                for (int i = 1; i < xpy; i++) {
-                    //cout << xpy - i << '/' << i << "\n";
-                    if (line == X) {
-                        x = xpy-i, y = i;
-                    }
-                    line++;
-                }
-            }
-
-            xpy++;
-        }
-
-        cout << x << '/' << y;
-
+    int fac=1;
+    int fac_pow=1;
+    while(fac_pow < X){
+        pofac_w = fac_pow*fac;
+        fac++;
     }
-
-
+    cout << fac_pow;
+    
 }
