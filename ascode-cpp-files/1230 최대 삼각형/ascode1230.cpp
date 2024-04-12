@@ -40,8 +40,9 @@ while(testcase--){
     int M=0;
 
     for(int i=0; i<N-2; ++i){
-        if(stick[i] < stick[i+1] + stick[i+2] && stick[i] + stick[i+1] + stick[i+2] > M){
+        if(stick[i] < stick[i+1] + stick[i+2]){
         M = stick[i] + stick[i+1] + stick[i+2];
+        break;
         }
     }
 
