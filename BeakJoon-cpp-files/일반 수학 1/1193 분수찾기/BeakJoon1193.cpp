@@ -27,9 +27,23 @@ using namespace std;
 int main() {
     FASTOUT
     int X;
+    int factorial=1;//몇 번째 팩토리얼인가
+    int num=0;//가장 큰 수
     cin >> X;
-
-    for(int i=1; i<X; i++){
-
+    if(X==1){
+        cout << "1/1\n";
+        return 0;
     }
+
+    while(X > num){
+        num += factorial++;
+    }
+    //cout << num <<"\n\n\n";
+    if(factorial%2==0){//짝수일 경우
+        cout << 1+(num-X) << "/" << factorial-(num-X+1) <<"\n";
+    }
+    else if(factorial%2==1){//홀수일 경우
+        cout << factorial-(num-X+1) << "/" << 1+(num-X) <<"\n";
+    }
+    
 }

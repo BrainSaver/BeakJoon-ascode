@@ -9,7 +9,7 @@ struct speed_train
  
 int find_min(int si[], int vi[], int n)
 {
-    int min_of_si = si[0];
+    int min_of_si = si[0]; // !!!!초기 최소값은 항상 배열의 첫번째 항으로 하도록 한다
     int result = 0;
     for (int i = 0; i < n; i++)
     {
