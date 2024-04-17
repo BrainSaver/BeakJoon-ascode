@@ -1,26 +1,30 @@
 #include <iostream>
-#include <string.h>
-#pragma warning(disable : 4996)
+
 using namespace std;
 
-class Student {
-char *name; // 이름
-int number;
-public:
-Student(const char *p, int n) { // 생성자
-cout << "메모리 할당" << endl;
-name = new char[strlen(p)+1]; // 널문자 공간 필요
-strcpy_s(name, (strlen(p)+1), p);
-number = n;
+int coinChange(int amount) {
+    int dp[3][amount+1];
+    dp[0][0] = 0;
+    for(int i=1; i<=amount; i++) {
+        dp[0][i] = i;
+    }
+    for(int i=0; i<3; i++) {
+        for(int j=500; j<=amount; j+=500) {
+            dp[i][j] = min(dp[i][j], dp[i][j-500]+1);
+        }
+        for(int j=100; j<=amount; j+=100) {
+            dp[i][j] = min(dp[i][j], dp[i][j-100]+1);
+        }
+        for(int j=50; j<=amount; j+=50) {
+            dp[i][j] = min(dp[i][j], dp[i][j-50]+1);
+        }
+    }
+    return dp[2][amount];
 }
-~Student() { // 멤버가 포인터이면 소멸자 필요
-cout << "메모리 소멸" << endl;
-delete [] name;
-}
-};
-int main()
-{
-Student s1("Park", 2);
-Student s2(s1); // 복사 생성자 호출
-return 0; // ERROR
+
+int main() {
+    int amount;
+    cin >> amount;
+    cout << coinChange(amount) << endl;
+    return 0;
 }

@@ -17,7 +17,7 @@ using namespace std;
 
 int D(int A, int B){
   int N[10];//무한소수의 나머지 저장용 배열
-  if(A*10%B==0){
+  if((A*10000000)%B==0){
     return 1;
   }
 
