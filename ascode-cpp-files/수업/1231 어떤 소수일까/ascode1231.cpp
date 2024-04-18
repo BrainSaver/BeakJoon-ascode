@@ -16,36 +16,40 @@
 using namespace std;
 
 int D(int A, int B){
-  int N[10];//무한소수의 나머지 저장용 배열
-  if((A*10000000)%B==0){
+    int N[10] = {0}; // 무한소수의 나머지 저장용 배열
+
+    if((A*100)%B == 0){
+        return 1;
+    }
+
+    for(int i = 0; i < 10; i++){ // 무한이면 return 0으로 함수 나가기
+        if(N[A % B] == 1){
+            return 0;
+        }
+        N[A % B] = 1;
+        A = (A % B) * 10;
+    }
+
     return 1;
-  }
-
-  for(int i=0; i<10; i++){//무한이면 return 0으로 함수 나가기
-  if(N[A%B]==1){
-    return 0;
-  }
-    N[A%B]=1;
-    A=A%B;
-  }
-
-  return 1;
 }
 
 int main() {
-FASTOUT
-int T;
-int A, B;
-cin >> T;
+    FASTOUT
+    int T;
+    int A, B;
+    cin >> T;
 
-for(int i=0; i<T; i++){
-cin >> A >> B;
-if(D(A, B)==1){
-  cout <<"Limited\n";
-}
-else if(D(A, B)==0){
-  cout << "Unlimited\n";
-}
+    for(int i = 0; i < T; i++){
+        cin >> A >> B;
+        if(D(A, B) == 1){
+            cout <<"Limited\n";
+        }
+        else if(D(A, B) == 0){
+            cout << "Unlimited\n";
+        }
+    }
+
+    return 0;
 }
 
-}
+
