@@ -17,7 +17,7 @@ for(int i=0; i<N; i++){
     cin >> X;
     for(int i=0; i<N; i++){
         if(A[i]>X){
-            cout << A[i] << " ";
+            cout << A[i] << ' ';
         }
     }
 }
