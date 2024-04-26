@@ -1,0 +1,1 @@
+{"name":"Local: ascode","url":"c:\\Users\\sk991\\Desktop\\20212972\\BeakJoon\\시험 문제\\2차원 배열 최대 윈도우 합\\ascode.cpp","tests":[{"id":1714113822695,"input":"1\n3 3\n1 3 -1\n2 4 7\n0 5 -2\n2","output":"14"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\sk991\\Desktop\\20212972\\BeakJoon\\시험 문제\\2차원 배열 최대 윈도우 합\\ascode.cpp","group":"local","local":true}
