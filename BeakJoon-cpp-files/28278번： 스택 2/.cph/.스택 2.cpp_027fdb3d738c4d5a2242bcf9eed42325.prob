@@ -1,0 +1,1 @@
+{"name":"Local: 스택 2","url":"c:\\Users\\sk991\\Desktop\\20212972\\BeakJoon\\28278번： 스택 2\\스택 2.cpp","tests":[{"id":1717728181540,"input":"9\n4\n1 3\n1 5\n3\n2\n5\n2\n2\n5","output":"1\n2\n5\n3\n3\n-1\n-1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\sk991\\Desktop\\20212972\\BeakJoon\\28278번： 스택 2\\스택 2.cpp","group":"local","local":true}
