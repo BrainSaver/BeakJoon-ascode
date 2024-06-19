@@ -1,0 +1,10 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "task-\uC88C\uD45C \uC815\uB82C\uD558\uAE30",
+      "appliesTo": "11650\uBC88\uFF1A \uC88C\uD45C \uC815\uB82C\uD558\uAE30/\uC88C\uD45C \uC815\uB82C\uD558\uAE30.bin",
+      "type": "launch"
+    }
+  ]
+}
