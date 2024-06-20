@@ -50,8 +50,6 @@ while(testcase--){
         cnt+= a[i];
     }
 
-
-
     if(cnt == 1){
         cout << "YES\n";
     }
